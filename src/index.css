@@ -5,8 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	background: linear-gradient(180deg, #8BA3A6 0%, #739095 100%);
+}
+main {
+	overflow: hidden;
 }
 
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Panton;
+}
+@font-face {
+	font-family: Panton;
+	 src: url("./fonts/PantonNarrow-Trial-Regular.ttf") format('truetype');
+	 font-style: normal;
+	 font-weight: normal;
+  }
+  @font-face {
+	font-family: Panton;
+	 src: url("./fonts/PantonNarrow-Trial-SemiBold.ttf") format('truetype');
+	 font-style: normal;
+	 font-weight: 600;
+  }
+  @font-face {
+	font-family: Panton;
+	 src: url("./fonts/PantonNarrow-Trial-Bold.ttf") format('truetype');
+	 font-style: normal;
+	 font-weight: 700;
+  }
+  @font-face {
+	font-family: Panton;
+	 src: url("./fonts/PantonNarrow-Trial-Thin.ttf") format('truetype');
+	 font-style: normal;
+	 font-weight: 300;
+  }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
