@@ -15,7 +15,7 @@ function NewsCreate(props) {
 					<FileField source='src' title='title' />
 				</FileInput>
  
-				<DateInput label='Published' source='publishedAt' />
+				<DateInput label='Published' source='createdAt' />
 			</SimpleForm>
 		</Create>
 	);

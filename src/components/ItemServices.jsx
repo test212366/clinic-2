@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemService from "./ItemService";
+import {apiSender} from '../utils/api'
 
  
  
@@ -10,17 +11,11 @@ function ItemServices(props) {
 
 	useEffect(() => {
 		(async () => {
-			const json = await fetch('http://localhost:5000/services') 
-			const data = await json.json()
+			const data = await apiSender('services')
 			setServicesItems(() => data)
-		 
 		})();
-		
-
-
 	}, []) 
-	console.log(servicesItems)
-
+ 
 
 	return (
 		<div className='percent__items_service'>

@@ -1,31 +1,30 @@
  
 import '../Main.css';
-import logo from '../imgs/logo.png'
+ 
 import elip1 from '../imgs/Ellipse 1.png'
 import elip2 from '../imgs/Ellipse 2.png'
 import elip3 from '../imgs/Ellipse 3.png'
 import elip4 from '../imgs/Ellipse 5.png'
 import elip5 from '../imgs/Ellipse 4.png'
 
-
-import slide1 from '../imgs/slide 1.png'
+ 
 import aboutHospital from '../imgs/about_hospital.png'
 import aboutLogo from '../imgs/about_logo.png'
 import tech_bg from '../imgs/tech_bg.png'
 import tech_up from '../imgs/bg__up.png'
-import serviceOne from '../imgs/service 1.png'
-import news from '../imgs/news.png'
-import newsprev from '../imgs/news prev.png'
+ 
+ 
 
-
-import { Swiper, SwiperSlide } from 'swiper/react';
+ 
  
 import 'swiper/css';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import ItemService from '../components/ItemService';
-import { useEffect, useRef, useState } from 'react';
+ 
 import ItemServices from '../components/ItemServices';
+import Slider from '../components/Slider';
+import { useRef } from 'react';
+import NewsReviews from '../components/NewsReviews';
 
  
 
@@ -60,96 +59,7 @@ function Main() {
 			</div>
 
 			<div className='relative'>
-				<section className='wrapper__swiper'>
-					<Swiper
-						spaceBetween={0}
-						slidesPerView={1.}
-						centeredSlides={true}
-						initialSlide={1}
-						breakpoints={{
-							// when window width is >= 640px
-							1700: {
-							  slidesPerView: 2.3,
-							},
-							1530: {
-								slidesPerView: 1.9,
-							 },
-							 1380: {
-								slidesPerView: 1.8,
-
-							 },
-							 1230: {
-								slidesPerView: 1.5,
-
-							 },
-							 1000: {
-								slidesPerView: 1.6,
-							 },
-							925: {
-								slidesPerView: 1.4
-							},
-							900: {
-								slidesPerView: 1.3
-							},
-							810: {
-								slidesPerView: 1.9
-
-							},
-							680: {
-								slidesPerView: 1.6
-
-							},
-							590: {
-								slidesPerView: 1.4
-
-							},
-							540: {
-								slidesPerView: 1.3
-
-							},
-							480: {
-								slidesPerView: 1.25
-
-							}, 
-							420: {
-								slidesPerView: 1.28	
-							},
-							390: {
-								slidesPerView: 1.2	
-
-							},
-							360: {
-								slidesPerView: 1.15
-							}
-						 }}
-					>
-						<SwiperSlide>
-							<img width='600px' src={slide1} alt="Slide" />
-					 
-						</SwiperSlide>
-						<SwiperSlide>
-							<img width='600px' src={slide1} alt="Slide" />
-							<div className='slider__desc'>
-								<h6>ИНФОРМАЦИЯ НА <span>ИЗОБРАЖЕНИИ</span></h6>
-								<p>Информация на изображении Информация на изображении Информация на изображении Информация на изображении Информация на изображении </p>
-								<svg width="331" height="88" viewBox="0 0 331 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<line y1="0.5" x2="251" y2="0.5" stroke="#B5B5B5"/>
-									<line x1="251.367" y1="0.66086" x2="311.367" y2="65.6609" stroke="#B5B5B5"/>
-									<circle cx="318.5" cy="75.5" r="12" stroke="#B5B5B5"/>
-									<circle cx="318.5" cy="75.5" r="6.5" fill="#B5B5B5"/>
-									</svg>
-
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<img width='600px' src={slide1} alt="Slide" />
-						</SwiperSlide>
-					<SwiperSlide>
-							<img width='600px' src={slide1} alt="Slide" />
-						</SwiperSlide>
-				
-					</Swiper>
-				</section>
+			 	<Slider />
 				<section className='main__container'>
 					<div className=' welcome__title_wrapper'>
 								
@@ -186,12 +96,12 @@ function Main() {
 						<circle cx="14" cy="33" r="3" fill="white"/>
 					</svg>
 					<svg className='sub__corner_one' width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line y1="1.50012" x2="37.0135" y2="1.50012" stroke="white" stroke-width="2"/>
-						<line x1="1.00677" y1="39.0135" x2="1.00677" y2="2.00004" stroke="white" stroke-width="2"/>
+						<line y1="1.50012" x2="37.0135" y2="1.50012" stroke="white" strokeWidth="2"/>
+						<line x1="1.00677" y1="39.0135" x2="1.00677" y2="2.00004" stroke="white" strokeWidth="2"/>
 					</svg>
 					<svg className='sub__corner_two' width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="37" y1="36" y2="36" stroke="white" stroke-width="2"/>
-						<line x1="37" x2="37" y2="37" stroke="white" stroke-width="2"/>
+						<line x1="37" y1="36" y2="36" stroke="white" strokeWidth="2"/>
+						<line x1="37" x2="37" y2="37" stroke="white" strokeWidth="2"/>
 					</svg>
 
 					<h6>Передовые Технологии Обследования</h6>
@@ -228,12 +138,12 @@ function Main() {
 							<circle cx="14" cy="33" r="3" fill="white"/>
 						</svg>
 						<svg className='sub__corner_one' width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<line y1="1.50012" x2="37.0135" y2="1.50012" stroke="white" stroke-width="2"/>
-							<line x1="1.00677" y1="39.0135" x2="1.00677" y2="2.00004" stroke="white" stroke-width="2"/>
+							<line y1="1.50012" x2="37.0135" y2="1.50012" stroke="white" strokeWidth="2"/>
+							<line x1="1.00677" y1="39.0135" x2="1.00677" y2="2.00004" stroke="white" strokeWidth="2"/>
 						</svg>
 						<svg className='sub__corner_two' width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<line x1="37" y1="36" y2="36" stroke="white" stroke-width="2"/>
-							<line x1="37" x2="37" y2="37" stroke="white" stroke-width="2"/>
+							<line x1="37" y1="36" y2="36" stroke="white" strokeWidth="2"/>
+							<line x1="37" x2="37" y2="37" stroke="white" strokeWidth="2"/>
 						</svg>
 
 						<h6>Передовые Технологии Обследования</h6>
@@ -245,7 +155,7 @@ function Main() {
 				<div className='line__wrapper'>
 					<p>ЦИТАТА ИЛИ ПРОСТО ТЕКСТ</p>
 					<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_20_61)">
+						<g clipPath="url(#clip0_20_61)">
 						<path d="M27.3889 6.44442H20.9444V3.2222C20.9444 2.33105 20.2245 1.61108 19.3333 1.61108H9.66667C8.77552 1.61108 8.05556 2.33105 8.05556 3.2222V6.44442H1.61111C0.719965 6.44442 0 7.16438 0 8.05553V26.5833C0 27.0264 0.3625 27.3889 0.805556 27.3889H28.1944C28.6375 27.3889 29 27.0264 29 26.5833V8.05553C29 7.16438 28.28 6.44442 27.3889 6.44442ZM8.05556 23.5625C8.05556 23.8948 7.78368 24.1666 7.45139 24.1666H5.4375C5.10521 24.1666 4.83333 23.8948 4.83333 23.5625V21.5486C4.83333 21.2163 5.10521 20.9444 5.4375 20.9444H7.45139C7.78368 20.9444 8.05556 21.2163 8.05556 21.5486V23.5625ZM8.05556 17.118C8.05556 17.4503 7.78368 17.7222 7.45139 17.7222H5.4375C5.10521 17.7222 4.83333 17.4503 4.83333 17.118V15.1041C4.83333 14.7718 5.10521 14.5 5.4375 14.5H7.45139C7.78368 14.5 8.05556 14.7718 8.05556 15.1041V17.118ZM16.1111 23.5625C16.1111 23.8948 15.8392 24.1666 15.5069 24.1666H13.4931C13.1608 24.1666 12.8889 23.8948 12.8889 23.5625V21.5486C12.8889 21.2163 13.1608 20.9444 13.4931 20.9444H15.5069C15.8392 20.9444 16.1111 21.2163 16.1111 21.5486V23.5625ZM16.1111 17.118C16.1111 17.4503 15.8392 17.7222 15.5069 17.7222H13.4931C13.1608 17.7222 12.8889 17.4503 12.8889 17.118V15.1041C12.8889 14.7718 13.1608 14.5 13.4931 14.5H15.5069C15.8392 14.5 16.1111 14.7718 16.1111 15.1041V17.118ZM16.9167 8.559C16.9167 8.72515 16.7807 8.86108 16.6146 8.86108H15.3056V10.1701C15.3056 10.3363 15.1696 10.4722 15.0035 10.4722H13.9965C13.8304 10.4722 13.6944 10.3363 13.6944 10.1701V8.86108H12.3854C12.2193 8.86108 12.0833 8.72515 12.0833 8.559V7.55206C12.0833 7.38591 12.2193 7.24997 12.3854 7.24997H13.6944V5.94095C13.6944 5.7748 13.8304 5.63886 13.9965 5.63886H15.0035C15.1696 5.63886 15.3056 5.7748 15.3056 5.94095V7.24997H16.6146C16.7807 7.24997 16.9167 7.38591 16.9167 7.55206V8.559ZM24.1667 23.5625C24.1667 23.8948 23.8948 24.1666 23.5625 24.1666H21.5486C21.2163 24.1666 20.9444 23.8948 20.9444 23.5625V21.5486C20.9444 21.2163 21.2163 20.9444 21.5486 20.9444H23.5625C23.8948 20.9444 24.1667 21.2163 24.1667 21.5486V23.5625ZM24.1667 17.118C24.1667 17.4503 23.8948 17.7222 23.5625 17.7222H21.5486C21.2163 17.7222 20.9444 17.4503 20.9444 17.118V15.1041C20.9444 14.7718 21.2163 14.5 21.5486 14.5H23.5625C23.8948 14.5 24.1667 14.7718 24.1667 15.1041V17.118Z" fill="white"/>
 						</g>
 						<defs>
@@ -262,11 +172,11 @@ function Main() {
 					<img src={aboutHospital} alt="about__img" />
 					<svg width="405" height="278" viewBox="0 0 405 278" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g filter="url(#filter0_d_20_45)">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M4 3.01823V240C4 256.568 17.4315 270 34 270H400.371V0.323242C373.835 84.7578 294.946 146 201.752 146C109.553 146 31.3539 86.0578 4 3.01823Z" fill="white"/>
+						<path fillRule="evenodd" clipRule="evenodd" d="M4 3.01823V240C4 256.568 17.4315 270 34 270H400.371V0.323242C373.835 84.7578 294.946 146 201.752 146C109.553 146 31.3539 86.0578 4 3.01823Z" fill="white"/>
 						</g>
 						<defs>
-						<filter id="filter0_d_20_45" x="0" y="0.323242" width="404.371" height="277.677" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<filter id="filter0_d_20_45" x="0" y="0.323242" width="404.371" height="277.677" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+						<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 						<feOffset dy="4"/>
 						<feGaussianBlur stdDeviation="2"/>
@@ -290,11 +200,11 @@ function Main() {
 
 					<svg width="602" height="868" viewBox="0 0 602 868" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g filter="url(#filter0_bd_15_217)">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H31L578 0.00023592C589.046 0.00024046 598 8.95455 598 20.0002V703.5C598 714.546 589.046 723.5 578 723.5H306.505C295.46 723.5 286.505 732.455 286.505 743.5V840C286.505 851.046 277.551 860 266.505 860H24.0001C23.9668 860 23.9335 860 23.9002 860H4V832H4.00007V450L4 28V0Z" fill="white"/>
+						<path fillRule="evenodd" clipRule="evenodd" d="M4 0H31L578 0.00023592C589.046 0.00024046 598 8.95455 598 20.0002V703.5C598 714.546 589.046 723.5 578 723.5H306.505C295.46 723.5 286.505 732.455 286.505 743.5V840C286.505 851.046 277.551 860 266.505 860H24.0001C23.9668 860 23.9335 860 23.9002 860H4V832H4.00007V450L4 28V0Z" fill="white"/>
 						</g>
 						<defs>
-						<filter id="filter0_bd_15_217" x="-6" y="-10" width="614" height="880" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<filter id="filter0_bd_15_217" x="-6" y="-10" width="614" height="880" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+						<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 						<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
 						<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_15_217"/>
 						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -351,8 +261,8 @@ function Main() {
 						</button>
 
 						<svg className='corner__additional' width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<line x1="37" y1="36" y2="36" stroke="white" stroke-width="2"/>
-							<line x1="37" x2="37" y2="37" stroke="white" stroke-width="2"/>
+							<line x1="37" y1="36" y2="36" stroke="white" strokeWidth="2"/>
+							<line x1="37" x2="37" y2="37" stroke="white" strokeWidth="2"/>
 						</svg>
 				 
 
@@ -428,15 +338,15 @@ function Main() {
 					<div className='tech__bg_svg'>
 						<svg className='tech__block'  width="524" height="719" viewBox="0 0 524 719" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g filter="url(#filter0_bd_64_3)">
-							<rect x="23.5" y="0.5" width="496" height="710" rx="19.5" stroke="white" shape-rendering="crispEdges"/>
+							<rect x="23.5" y="0.5" width="496" height="710" rx="19.5" stroke="white" shapeRendering="crispEdges"/>
 							</g>
 							<g filter="url(#filter1_bd_64_3)">
 							<path d="M4 40.1322C4 29.035 13.0348 20.0595 24.1318 20.1326L368.132 22.399C379.126 22.4714 388 31.4042 388 42.3985V58.1866C388 69.2323 396.954 78.1866 408 78.1866H484C495.046 78.1866 504 87.1409 504 98.1866V678C504 689.046 495.046 698 484 698H24C12.9543 698 4 689.046 4 678V40.1322Z" fill="white"/>
 							<path d="M4.5 40.1322C4.5 29.3124 13.3089 20.5613 24.1285 20.6326L368.128 22.8989C378.848 22.9696 387.5 31.6791 387.5 42.3985V58.1866C387.5 69.5084 396.678 78.6866 408 78.6866H484C494.77 78.6866 503.5 87.417 503.5 98.1866V678C503.5 688.77 494.77 697.5 484 697.5H24C13.2305 697.5 4.5 688.77 4.5 678V40.1322Z" stroke="url(#paint0_linear_64_3)"/>
 							</g>
 							<defs>
-							<filter id="filter0_bd_64_3" x="13" y="-10" width="517" height="731" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<filter id="filter0_bd_64_3" x="13" y="-10" width="517" height="731" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 							<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
 							<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_64_3"/>
 							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -447,8 +357,8 @@ function Main() {
 							<feBlend mode="normal" in2="effect1_backgroundBlur_64_3" result="effect2_dropShadow_64_3"/>
 							<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_64_3" result="shape"/>
 							</filter>
-							<filter id="filter1_bd_64_3" x="-6" y="10.1322" width="520" height="697.868" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<filter id="filter1_bd_64_3" x="-6" y="10.1322" width="520" height="697.868" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 							<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
 							<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_64_3"/>
 							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -461,7 +371,7 @@ function Main() {
 							</filter>
 							<linearGradient id="paint0_linear_64_3" x1="495" y1="298.93" x2="22.2014" y2="325.762" gradientUnits="userSpaceOnUse">
 							<stop/>
-							<stop offset="1" stop-color="#666666" stop-opacity="0"/>
+							<stop offset="1" stopColor="#666666" stopOpacity="0"/>
 							</linearGradient>
 							</defs>
 						</svg>
@@ -493,8 +403,8 @@ function Main() {
 							</div>
 						</div>
 						<svg className='tech__corner' width="37" height="39" viewBox="0 0 37 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<line y1="-1" x2="37" y2="-1" transform="matrix(1 0 0 -1 0 36.5001)" stroke="white" stroke-width="2"/>
-							<line y1="-1" x2="37" y2="-1" transform="matrix(0 1 1 0 2.0061 0)" stroke="white" stroke-width="2"/>
+							<line y1="-1" x2="37" y2="-1" transform="matrix(1 0 0 -1 0 36.5001)" stroke="white" strokeWidth="2"/>
+							<line y1="-1" x2="37" y2="-1" transform="matrix(0 1 1 0 2.0061 0)" stroke="white" strokeWidth="2"/>
 							</svg>
 						<button onClick={() => {
 							services.current.scrollIntoView({behavior: "smooth"})
@@ -521,7 +431,7 @@ function Main() {
 				<div className='service__circle'></div>
 				<div className='service__circle'></div>
 				<svg className='svg__service' width="571" height="269" viewBox="0 0 571 269" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M22.1055 21.1047V0H23.1055V21.1038L97.1055 21.0349V0H98.1055V21.034L172.106 20.9651V0H173.106V20.9642L247.106 20.8954V0H248.106V20.8944L269 20.875L269.001 21.875L248.106 21.8944V95.8945L269.07 95.875L269.071 96.875L248.106 96.8945V170.894L269.139 170.875L269.14 171.875L248.106 171.894V245.894L269.209 245.875L269.21 246.875L248.106 246.894V269H247.106V246.895L173.106 246.964V269H172.106V246.965L98.1055 247.034V269H97.1055V247.035L23.1055 247.104V269H22.1055V247.105L0.210281 247.125L0.209351 246.125L22.1055 246.105V172.105L0.140457 172.125L0.139526 171.125L22.1055 171.105V97.1047L0.0707545 97.1252L0.0698242 96.1252L22.1055 96.1047V22.1047L0.000930261 22.1252L0 21.1252L22.1055 21.1047ZM247.106 171.895V245.895L173.106 245.964V171.964L247.106 171.895ZM172.106 171.965V245.965L98.1055 246.034V172.034L172.106 171.965ZM97.1055 172.035V246.035L23.1055 246.104V172.104L97.1055 172.035ZM23.1055 171.104L97.1055 171.035V97.035L23.1055 97.1038V171.104ZM98.1055 171.034L172.106 170.965V96.9652L98.1055 97.034V171.034ZM173.106 170.964L247.106 170.895V96.8954L173.106 96.9643V170.964ZM247.106 21.8954V95.8954L173.106 95.9643V21.9642L247.106 21.8954ZM172.106 21.9651V95.9652L98.1055 96.034V22.034L172.106 21.9651ZM97.1055 22.0349V96.035L23.1055 96.1038V22.1038L97.1055 22.0349ZM323.106 21.1047V0H324.106V21.1038L398.106 21.0349V0H399.106V21.034L473.106 20.9651V0H474.106V20.9642L548.106 20.8954V0H549.106V20.8944L570 20.875L570.001 21.875L549.106 21.8944V95.8945L570.07 95.875L570.071 96.875L549.106 96.8945V170.894L570.139 170.875L570.14 171.875L549.106 171.894V245.894L570.209 245.875L570.21 246.875L549.106 246.894V269H548.106V246.895L474.106 246.964V269H473.106V246.965L399.106 247.034V269H398.106V247.035L324.106 247.104V269H323.106V247.105L301.21 247.125L301.209 246.125L323.106 246.105V172.105L301.14 172.125L301.14 171.125L323.106 171.105V97.1047L301.071 97.1252L301.07 96.1252L323.106 96.1047V22.1047L301.001 22.1252L301 21.1252L323.106 21.1047ZM548.106 171.895V245.895L474.106 245.964V171.964L548.106 171.895ZM473.106 171.965V245.965L399.106 246.034V172.034L473.106 171.965ZM398.106 172.035V246.035L324.106 246.104V172.104L398.106 172.035ZM324.106 171.104L398.106 171.035V97.035L324.106 97.1038V171.104ZM399.106 171.034L473.106 170.965V96.9652L399.106 97.034V171.034ZM474.106 170.964L548.106 170.895V96.8954L474.106 96.9643V170.964ZM548.106 21.8954V95.8954L474.106 95.9643V21.9642L548.106 21.8954ZM473.106 21.9651V95.9652L399.106 96.034V22.034L473.106 21.9651ZM398.106 22.0349V96.035L324.106 96.1038V22.1038L398.106 22.0349Z" fill="url(#paint0_radial_72_4)"/>
+					<path fillRule="evenodd" clipRule="evenodd" d="M22.1055 21.1047V0H23.1055V21.1038L97.1055 21.0349V0H98.1055V21.034L172.106 20.9651V0H173.106V20.9642L247.106 20.8954V0H248.106V20.8944L269 20.875L269.001 21.875L248.106 21.8944V95.8945L269.07 95.875L269.071 96.875L248.106 96.8945V170.894L269.139 170.875L269.14 171.875L248.106 171.894V245.894L269.209 245.875L269.21 246.875L248.106 246.894V269H247.106V246.895L173.106 246.964V269H172.106V246.965L98.1055 247.034V269H97.1055V247.035L23.1055 247.104V269H22.1055V247.105L0.210281 247.125L0.209351 246.125L22.1055 246.105V172.105L0.140457 172.125L0.139526 171.125L22.1055 171.105V97.1047L0.0707545 97.1252L0.0698242 96.1252L22.1055 96.1047V22.1047L0.000930261 22.1252L0 21.1252L22.1055 21.1047ZM247.106 171.895V245.895L173.106 245.964V171.964L247.106 171.895ZM172.106 171.965V245.965L98.1055 246.034V172.034L172.106 171.965ZM97.1055 172.035V246.035L23.1055 246.104V172.104L97.1055 172.035ZM23.1055 171.104L97.1055 171.035V97.035L23.1055 97.1038V171.104ZM98.1055 171.034L172.106 170.965V96.9652L98.1055 97.034V171.034ZM173.106 170.964L247.106 170.895V96.8954L173.106 96.9643V170.964ZM247.106 21.8954V95.8954L173.106 95.9643V21.9642L247.106 21.8954ZM172.106 21.9651V95.9652L98.1055 96.034V22.034L172.106 21.9651ZM97.1055 22.0349V96.035L23.1055 96.1038V22.1038L97.1055 22.0349ZM323.106 21.1047V0H324.106V21.1038L398.106 21.0349V0H399.106V21.034L473.106 20.9651V0H474.106V20.9642L548.106 20.8954V0H549.106V20.8944L570 20.875L570.001 21.875L549.106 21.8944V95.8945L570.07 95.875L570.071 96.875L549.106 96.8945V170.894L570.139 170.875L570.14 171.875L549.106 171.894V245.894L570.209 245.875L570.21 246.875L549.106 246.894V269H548.106V246.895L474.106 246.964V269H473.106V246.965L399.106 247.034V269H398.106V247.035L324.106 247.104V269H323.106V247.105L301.21 247.125L301.209 246.125L323.106 246.105V172.105L301.14 172.125L301.14 171.125L323.106 171.105V97.1047L301.071 97.1252L301.07 96.1252L323.106 96.1047V22.1047L301.001 22.1252L301 21.1252L323.106 21.1047ZM548.106 171.895V245.895L474.106 245.964V171.964L548.106 171.895ZM473.106 171.965V245.965L399.106 246.034V172.034L473.106 171.965ZM398.106 172.035V246.035L324.106 246.104V172.104L398.106 172.035ZM324.106 171.104L398.106 171.035V97.035L324.106 97.1038V171.104ZM399.106 171.034L473.106 170.965V96.9652L399.106 97.034V171.034ZM474.106 170.964L548.106 170.895V96.8954L474.106 96.9643V170.964ZM548.106 21.8954V95.8954L474.106 95.9643V21.9642L548.106 21.8954ZM473.106 21.9651V95.9652L399.106 96.034V22.034L473.106 21.9651ZM398.106 22.0349V96.035L324.106 96.1038V22.1038L398.106 22.0349Z" fill="url(#paint0_radial_72_4)"/>
 					<path d="M290.372 61.0211L284.248 49.7301L281.521 49.3296L280.027 59.5017L277.343 59.1076L280.598 36.9453L283.282 37.3395L281.87 46.9489L283.039 47.1205L293.324 38.8143L296.527 39.2847L286.136 47.7081L293.575 61.4915L290.372 61.0211Z" fill="white"/>
 					<path d="M302.722 65.566C301.749 65.1362 300.946 64.5627 300.314 63.8455C299.685 63.1216 299.291 62.3065 299.133 61.3999C298.978 60.4867 299.122 59.5298 299.563 58.5292C299.952 57.6486 300.44 57.0113 301.028 56.6173C301.62 56.2167 302.274 55.9876 302.993 55.9302C303.712 55.8727 304.455 55.9218 305.224 56.0775C306.001 56.2294 306.768 56.4161 307.523 56.6377C308.51 56.9297 309.307 57.1738 309.914 57.3698C310.53 57.5621 311.006 57.6405 311.34 57.6048C311.681 57.572 311.936 57.3655 312.104 56.9853L312.139 56.9052C312.575 55.9179 312.643 55.0315 312.344 54.246C312.052 53.4635 311.362 52.8324 310.274 52.3525C309.147 51.8551 308.154 51.7119 307.296 51.923C306.438 52.134 305.755 52.4624 305.247 52.9079L303.359 51.1184C304.171 50.361 305.026 49.8694 305.923 49.6434C306.829 49.4137 307.725 49.3705 308.61 49.514C309.505 49.6538 310.339 49.8944 311.113 50.2358C311.606 50.4537 312.147 50.7639 312.734 51.1666C313.331 51.5655 313.851 52.0776 314.292 52.7027C314.74 53.3308 315.004 54.0968 315.083 55.0005C315.163 55.9043 314.933 56.9666 314.395 58.1874L309.926 68.3141L307.565 67.2721L308.483 65.1907L308.363 65.1377C308.056 65.4007 307.631 65.6398 307.09 65.8552C306.549 66.0706 305.909 66.1749 305.171 66.168C304.432 66.1611 303.616 65.9604 302.722 65.566ZM304.019 63.6035C304.953 64.0156 305.821 64.1795 306.623 64.0952C307.432 64.0138 308.128 63.755 308.711 63.3189C309.301 62.8857 309.737 62.3488 310.02 61.7084L310.973 59.547C310.82 59.6229 310.551 59.6358 310.167 59.5858C309.792 59.532 309.369 59.4447 308.896 59.3238C308.433 59.1991 307.983 59.0723 307.546 58.9431C307.118 58.8103 306.77 58.7046 306.502 58.6261C305.853 58.4353 305.222 58.3123 304.609 58.2569C304.005 58.1978 303.462 58.2729 302.979 58.4823C302.506 58.6879 302.137 59.0909 301.872 59.6913C301.51 60.5118 301.539 61.2662 301.961 61.9543C302.392 62.6387 303.078 63.1885 304.019 63.6035Z" fill="white"/>
 					<path d="M314.761 71.265L324.944 57.9029L326.997 59.4675L322.569 65.2786L323.926 66.3129L333.156 64.1613L335.801 66.1767L325.502 68.5038L325.688 79.5918L323.043 77.5764L322.955 68.598L321.11 67.1925L316.814 72.8296L314.761 71.265Z" fill="white"/>
@@ -548,20 +458,20 @@ function Main() {
 					<path d="M259.861 45.9504L259.638 43.5544L273.23 42.2922L273.453 44.6881L267.964 45.1979L269.295 59.5299L266.724 59.7686L265.393 45.4366L259.861 45.9504Z" fill="white"/>
 					<defs>
 					<radialGradient id="paint0_radial_72_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(285.105 134.5) rotate(92.1473) scale(269.689 571.672)">
-					<stop stop-color="#1F5D6C"/>
-					<stop offset="1" stop-color="white" stop-opacity="0"/>
+					<stop stopColor="#1F5D6C"/>
+					<stop offset="1" stopColor="white" stopOpacity="0"/>
 					</radialGradient>
 					</defs>
 					</svg>
 
 				<div className='percent__services'>
 					<svg className='percent__corner' width="37" height="39" viewBox="0 0 37 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line y1="1.5" x2="37" y2="1.5" stroke="#1F5D6C" stroke-width="2"/>
-						<line x1="1.0061" y1="39" x2="1.0061" y2="2" stroke="#1F5D6C" stroke-width="2"/>
+						<line y1="1.5" x2="37" y2="1.5" stroke="#1F5D6C" strokeWidth="2"/>
+						<line x1="1.0061" y1="39" x2="1.0061" y2="2" stroke="#1F5D6C" strokeWidth="2"/>
 					</svg>
 					<svg className='percent__cornerTw' width="37" height="39" viewBox="0 0 37 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line x1="37" y1="37.5" y2="37.5" stroke="#1F5D6C" stroke-width="2"/>
-						<line x1="35.994" x2="35.994" y2="37" stroke="#1F5D6C" stroke-width="2"/>
+						<line x1="37" y1="37.5" y2="37.5" stroke="#1F5D6C" strokeWidth="2"/>
+						<line x1="35.994" x2="35.994" y2="37" stroke="#1F5D6C" strokeWidth="2"/>
 					 </svg>
 					 <svg className='percent__line' width="298" height="88" viewBox="0 0 298 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<line y1="-0.5" x2="225.976" y2="-0.5" transform="matrix(-1 0 0 1 298 1)" stroke="#1F5D6C"/>
@@ -586,7 +496,7 @@ function Main() {
 						</div>
 					</div>
 					<svg className='line__static' width="421" height="11" viewBox="0 0 421 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<line y1="1.25" x2="420.034" y2="1.25" stroke="#1F5D6C" stroke-width="2"/>
+						<line y1="1.25" x2="420.034" y2="1.25" stroke="#1F5D6C" strokeWidth="2"/>
 						<rect x="0.012085" y="2" width="32" height="9" fill="#1F5D6C"/>
 					</svg>
 					<div className='percent__stat'>
@@ -624,110 +534,7 @@ function Main() {
 			</div>
 
 			<div ref={reviews} className='reviews'>
-				<p className='reviews__bg_text'>НАШИ ОТЗЫВЫ</p>
-				<div className='reviews__container'>
-					<div className='container__review'>
-						<div className='wrapper__review'>
-							<h6>Отзывы Клиентов</h6>
-							<div className='review__items'>
-								<div className='review__item'>
-								 
-										<div>Кристина</div>
-								 
-									<p>Врачи большие профессионалы. Очень приятны в общении. Приятно удивило кафе со вкусностями. Хотя обычно ожидание не долгое, но сама забота о больных подкупает. Спасибо за хороший сервис!</p>
-								</div>
-								<div className='review__item'>
-								 
-										<div>Кристина</div>
-								 
-									<p>Врачи большие профессионалы. Очень приятны в общении. Приятно удивило кафе со вкусностями. Хотя обычно ожидание не долгое, но сама забота о больных подкупает. Спасибо за хороший сервис!</p>
-								</div>
-								<div className='review__item'>
-								 
-										<div>Кристина</div>
-								 
-									<p>Врачи большие профессионалы. Очень приятны в общении. Приятно удивило кафе со вкусностями. Хотя обычно ожидание не долгое, но сама забота о больных подкупает. Спасибо за хороший сервис!</p>
-								</div>
-							</div>
-						</div>
-						<svg className='corner__review' width="37" height="39" viewBox="0 0 37 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<line x1="37" y1="37.5" y2="37.5" stroke="white" stroke-width="2"/>
-							<line x1="35.994" x2="35.994" y2="37" stroke="white" stroke-width="2"/>
-							</svg>
-
-						<svg className='reviews__svg' width="598" height="731" viewBox="0 0 598 731" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g filter="url(#filter0_bd_72_5)">
-							<path d="M4 37.7744L535.173 8.11511C546.201 7.49931 555.641 15.9405 556.257 26.969L593.442 692.932L62.2695 722.591C51.241 723.207 41.8014 714.766 41.1856 703.737L4 37.7744Z" fill="#C4C4C4"/>
-							</g>
-							<g filter="url(#filter1_bd_72_5)">
-							<path d="M18 22.2803L549.675 3.69889C560.714 3.31309 569.976 11.9492 570.362 22.9881L593.658 689.581L61.9829 708.163C50.944 708.548 41.6824 699.912 41.2966 688.873L18 22.2803Z" fill="#E4E4E4"/>
-							</g>
-							<g filter="url(#filter2_bd_72_5)">
-							<path d="M42 0H574C585.046 0 594 8.95431 594 20V687H62C50.9543 687 42 678.046 42 667V0Z" fill="white"/>
-							</g>
-							<defs>
-							<filter id="filter0_bd_72_5" x="-6" y="-1.9165" width="609.442" height="734.539" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-							<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-							<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_72_5"/>
-							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-							<feOffset dy="4"/>
-							<feGaussianBlur stdDeviation="2"/>
-							<feComposite in2="hardAlpha" operator="out"/>
-							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-							<feBlend mode="normal" in2="effect1_backgroundBlur_72_5" result="effect2_dropShadow_72_5"/>
-							<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_72_5" result="shape"/>
-							</filter>
-							<filter id="filter1_bd_72_5" x="8" y="-6.31348" width="595.658" height="724.489" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-							<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-							<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_72_5"/>
-							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-							<feOffset dy="4"/>
-							<feGaussianBlur stdDeviation="2"/>
-							<feComposite in2="hardAlpha" operator="out"/>
-							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-							<feBlend mode="normal" in2="effect1_backgroundBlur_72_5" result="effect2_dropShadow_72_5"/>
-							<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_72_5" result="shape"/>
-							</filter>
-							<filter id="filter2_bd_72_5" x="32" y="-10" width="572" height="707" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-							<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
-							<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_72_5"/>
-							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-							<feOffset dy="4"/>
-							<feGaussianBlur stdDeviation="2"/>
-							<feComposite in2="hardAlpha" operator="out"/>
-							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-							<feBlend mode="normal" in2="effect1_backgroundBlur_72_5" result="effect2_dropShadow_72_5"/>
-							<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_72_5" result="shape"/>
-							</filter>
-							</defs>
-						</svg>
-
-					</div>
-					<div className="welcome__title_description shadow news__clin"></div>
-					<div className='clinic__news'>
-						<div className='clinic__data'>
-							<p>13.04.23</p>
-						</div>
-						<h6>Новости Клиники</h6>
-						<div className='prevNews'>
-							<p>Предыдущая Новость</p>
-							<img src={newsprev} alt="newsPrev" />
-
-						</div>
-
-						 
-						<img src={news} alt="newsLast" />
-						<p className='news__additional'>Дополнительный текст с каким либо значением Дополнительный текст с каким либо значением Дополнительный текст с каким либо значением Дополнительный текст с каким либо значением Дополнительный текст с каким либо </p>
-						<button className='moreNews'>БОЛЬШЕ НОВОСТЕЙ</button>
-					</div>
-
-					 
-				</div>
-			 
-
+				 <NewsReviews />
 			</div>
 
 
@@ -756,12 +563,12 @@ function Main() {
 
 							<button>ОТПРАВИТЬ СООБЩЕНИЕ</button>
 							<svg className='corner__cont' width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<line x1="37.0135" y1="37.5137" x2="3.8147e-05" y2="37.5137" stroke="#1F5D6C" stroke-width="2"/>
-								<line x1="36.0068" y1="0.000244141" x2="36.0068" y2="37.0138" stroke="#1F5D6C" stroke-width="2"/>
+								<line x1="37.0135" y1="37.5137" x2="3.8147e-05" y2="37.5137" stroke="#1F5D6C" strokeWidth="2"/>
+								<line x1="36.0068" y1="0.000244141" x2="36.0068" y2="37.0138" stroke="#1F5D6C" strokeWidth="2"/>
 							</svg>
 							<svg className='corner__cont_up' width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<line y1="1.5" x2="37.0135" y2="1.5" stroke="#1F5D6C" stroke-width="2"/>
-								<line x1="1.00684" y1="39.0134" x2="1.00684" y2="1.99992" stroke="#1F5D6C" stroke-width="2"/>
+								<line y1="1.5" x2="37.0135" y2="1.5" stroke="#1F5D6C" strokeWidth="2"/>
+								<line x1="1.00684" y1="39.0134" x2="1.00684" y2="1.99992" stroke="#1F5D6C" strokeWidth="2"/>
 							</svg>
 
 						</div>
@@ -775,7 +582,7 @@ function Main() {
 			<div ref={map} className='map'>
 				<h6>Мы на карте</h6>
 
-			 <iframe src="https://yandex.ru/map-widget/v1/org/medclinic/68593172465/?ll=44.645030%2C43.049038&z=17" width="100%" height="600" frameborder="1" allowfullscreen="true"  ></iframe> 
+			 <iframe src="https://yandex.ru/map-widget/v1/org/medclinic/68593172465/?ll=44.645030%2C43.049038&z=17" width="100%" height="600" frameBorder="1" allowFullScreen={true}  ></iframe> 
 
 
 			</div>
